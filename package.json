@@ -7,7 +7,6 @@
     "test": "tests"
   },
   "dependencies": {
-    "defaultdict": "~0.0.1",
     "jasmine-node": "~1.11.0",
     "underscore": "~1.5.2"
   },
