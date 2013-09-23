@@ -1,0 +1,29 @@
+{
+  "name": "wordfreq",
+  "version": "0.0.1",
+  "description": "word frequency",
+  "main": "wordfreq.js",
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {
+    "defaultdict": "~0.0.1",
+    "jasmine-node": "~1.11.0",
+    "underscore": "~1.5.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "jasmine-node --verbose spec/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "placeholder"
+  },
+  "keywords": [
+    "count",
+    "word",
+    "frequency"
+  ],
+  "author": "Thomas Noe",
+  "license": "BSD"
+}
