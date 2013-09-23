@@ -1,8 +1,8 @@
 {
-  "name": "wordfreq",
+  "name": "wordfrequenter",
   "version": "0.0.1",
   "description": "word frequency",
-  "main": "wordfreq.js",
+  "main": "wordfrequenter.js",
   "directories": {
     "test": "tests"
   },
@@ -17,7 +17,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/t3h2mas/WordFreq.git"
+    "url": "https://github.com/t3h2mas/WordFrequenter.git"
   },
   "keywords": [
     "count",

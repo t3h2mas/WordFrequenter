@@ -1,5 +1,5 @@
-var WordFreq = require('../wordfreq');
-var list = ['esp', 'thomas', 'sup'];
+var WordFreq = require('../wordfrequenter');
+var list = ['esp', 'jtruant', 'sup'];
 var Words = new WordFreq(list);
 
 describe("Make the app", function () {
