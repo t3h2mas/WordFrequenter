@@ -39,4 +39,4 @@ WordFreq.prototype.list = function () {
 	return resp;
 }
 
-module.exports = WordFrequenter;
+module.exports = WordFreq;

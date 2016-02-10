@@ -1,4 +1,4 @@
-var WordFreq = require('../wordfrequenter');
+var WordFreq = require('../wordfrequenter.js');
 var list = ['esp', 'jtruant', 'sup'];
 var Words = new WordFreq(list);
 
