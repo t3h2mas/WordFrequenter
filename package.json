@@ -1,6 +1,6 @@
 {
   "name": "wordfrequenter",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "word frequency",
   "main": "wordfrequenter.js",
   "directories": {
