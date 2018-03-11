@@ -1,13 +1,10 @@
 WordFrequenter
 =============
 
-Node.js word frequency
+JavaScript word frequency
 ----------------------
 
-Simple Node.js project I started because I didn't like the current javascript alternatives.
-
-Inspired by Python's DefaultDict, WordFrequenter provides an object that aims to make counting the frequency of words easier.
-
+Inspired by Python's DefaultDict, WordFrequenter provides an object to count the frequency of words
 
 ## install
 npm: `npm i --save wordfrequenter`
