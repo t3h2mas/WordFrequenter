@@ -1,6 +1,6 @@
 const expect = require('chai').expect
 const WordFreq = require('../wordfrequenter.js')
-const list = ['esp', 'jtruant', 'sup']
+const list = ['foo', 'bar', 'baz']
 const Words = new WordFreq(list)
 
 describe('WordFreq', function () {
@@ -9,10 +9,12 @@ describe('WordFreq', function () {
     })
     describe('.get', function () {
         it('should not find a word it was not initialized with', function () {
-            expect(Words.get('thomas')).to.equal(undefined)
+            expect(Words.get('ham')).to.equal(undefined)
         })
-        it('should return the correct word value', function () {
-            expect(Words.get('sup')['word']).to.equal('sup')
+        it('should return the correct word & count', function () {
+            const fooWord = Words.get('foo')
+            expect(fooWord['word']).to.equal('foo')
+            expect(fooWord['count']).to.equal(1)
         })
     })
     describe('.list', function () {
