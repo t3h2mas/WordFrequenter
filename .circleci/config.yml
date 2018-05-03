@@ -11,3 +11,8 @@ jobs:
       - run:
           name: test
           command: npm run test-ci
+      - store_artifacts:
+          path: ava.xml
+          prefix: test
+      - store_test_results:
+          path: ava.xml

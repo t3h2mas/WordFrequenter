@@ -10,7 +10,7 @@
   },
   "scripts": {
     "test": "ava -v",
-    "test-ci": "ava --tap | tap-xunit > $CIRCLE_TEST_REPORTS/ava.xml"
+    "test-ci": "ava --tap | tap-xunit > ava.xml"
   },
   "repository": {
     "type": "git",
