@@ -2,6 +2,10 @@ const valOrZero = val => (val || 0)
 
 function WordFreq(start = []) {
 	if (typeof start === 'string') start = start.split(' ')
+
+	if (!Array.isArray(start)) {
+		throw new Error(`typeof start (${typeof start}) invalid. must be string or array`)
+	}
 	this.vals = start.reduce((acc, cur) => {
 		acc[cur] = valOrZero(acc[cur]) + 1
 		return acc

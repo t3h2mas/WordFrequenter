@@ -16,6 +16,9 @@ describe('WordFreq', function () {
 
         expect(fromStr).to.deep.equal(fromArr)
     })
+    it('should throw when not passed a string or array on initialization', function() {
+        expect(() => new WordFreq(1336)).to.throw('typeof start (number) invalid. must be string or array')
+    })
     describe('.get', function () {
         it('should not find a word it was not initialized with', function () {
             expect(Words.get('ham')).to.equal(undefined)
