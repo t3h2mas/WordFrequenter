@@ -1,5 +1,3 @@
-const _ = require('underscore')
-
 const valOrZero = val => (val || 0)
 
 function WordFreq(start = []) {
