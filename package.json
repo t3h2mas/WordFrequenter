@@ -1,6 +1,6 @@
 {
   "name": "wordfrequenter",
-  "version": "0.0.5",
+  "version": "1.0.0",
   "description": "word frequency",
   "main": "wordfrequenter.js",
   "dependencies": {},
