@@ -1,6 +1,5 @@
 const _ = require('underscore')
 
-
 function Word(word) {
 	word = word || ''
 	this.word = word
