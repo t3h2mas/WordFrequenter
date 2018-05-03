@@ -1,41 +1,32 @@
 const _ = require('underscore')
 
-function Word(word) {
-	word = word || ''
-	this.word = word
-	_.defaults(this, {count: 1})
+const valOrZero = val => (val || 0)
+
+function WordFreq(start = []) {
+	this.vals = start.reduce((acc, cur) => {
+		acc[cur] = valOrZero(acc[cur]) + 1
+		return acc
+	}, {})
 }
 
-function WordFreq(start) {
-	start = start || []
-	this.vals = []
-	// add any items from start into the list, we assume that
-	// the list looks like ['word', ...] and counts will be defaulted
-	start.forEach(function (word) {
-		this.set(word)
-	}, this)
-}
-
-// TODO: fix WordFreq -> Word
 WordFreq.prototype.set = function(word) {
-	found = this.get(word)
-	if (!found) { // need to test for duplicates so we don't overwrite
-		w = new Word(word)
-		this.vals.push(w)
-	} else {
-		++found['count']
-	}
+	const nextValue = valOrZero(this.vals[word]) + 1
+	this.vals = Object.assign({}, this.vals, {[word]: nextValue})
+	
+	// return the word and it's count
+	return {word, count: nextValue}
 }
 
 WordFreq.prototype.get = function(word) {
-	var resp = _.find(this.vals, function(entry) { return entry['word'] == word; })
-	return resp
+	return this.vals[word]
+		   ? {word, count: this.vals[word]} 
+		   : undefined
 }
 
-// TODO: fix sorting
 WordFreq.prototype.list = function () {
-	var resp = this.vals.sort(function (a, b) { return a['count'] > b['count']; })
-	return resp
+	return Object.entries(this.vals)
+				 .sort((x, y) => x[1] < y[1])
+				 .map(entry => ({word: entry[0], count: entry[1]}))
 }
 
 module.exports = WordFreq
