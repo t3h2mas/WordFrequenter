@@ -6,8 +6,8 @@ jobs:
     steps:
       - checkout
       - run:
-        name: install-dependencies
-        command: npm install
+          name: install-dependencies
+          command: npm install
       - run:
-        name: test
-        command: npm test
+          name: test
+          command: npm test
