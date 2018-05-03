@@ -16,3 +16,4 @@ jobs:
           prefix: test
       - store_test_results:
           path: ava.xml
+          prefix: test
