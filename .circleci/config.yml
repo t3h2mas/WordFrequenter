@@ -16,10 +16,10 @@ jobs:
             - ./node_modules
       - run:
           name: test
-          command: npm run test-ci
+          command: |
+            mkdir -p ~/reports
+            npm run test-ci
       - store_artifacts:
-          path: ava.xml
-          prefix: test
+          path: ~/reports
       - store_test_results:
-          path: ava.xml
-          prefix: test
+          path: ~/reports
