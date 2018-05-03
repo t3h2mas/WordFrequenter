@@ -10,4 +10,4 @@ jobs:
           command: npm install
       - run:
           name: test
-          command: npm test
+          command: ava --tap | tap-xunit > $CIRCLE_TEST_REPORTS/ava.xml

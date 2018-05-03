@@ -5,11 +5,11 @@
   "main": "wordfrequenter.js",
   "dependencies": {},
   "devDependencies": {
-    "chai": "^4.1.2",
-    "mocha": "^5.1.1"
+    "ava": "^0.25.0",
+    "tap-xunit": "^2.3.0"
   },
   "scripts": {
-    "test": "./node_modules/.bin/mocha"
+    "test": "ava -v"
   },
   "repository": {
     "type": "git",
@@ -20,6 +20,12 @@
     "word",
     "frequency"
   ],
+  "ava": {
+    "files": [
+      "test/*.js"
+    ],
+    "concurrency": 5
+  },
   "author": "Thomas Noe",
   "license": "BSD"
 }
