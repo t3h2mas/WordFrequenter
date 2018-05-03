@@ -1,10 +1,10 @@
 const expect = require('chai').expect
 const WordFreq = require('../wordfrequenter.js')
 
-let Words
 const list = ['foo', 'bar', 'baz']
 
 describe('WordFreq', function () {
+    let Words
     beforeEach(() => {
         Words = new WordFreq(list)
     })
