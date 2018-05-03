@@ -9,7 +9,7 @@ describe('WordFreq', function () {
     })
     describe('.get', function () {
         it('should not find a word it was not initialized with', function () {
-            expect(Words.get('thomas')).not.to.equal(true)
+            expect(Words.get('thomas')).to.equal(undefined)
         })
         it('should return the correct word value', function () {
             expect(Words.get('sup')['word']).to.equal('sup')
