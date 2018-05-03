@@ -1,6 +1,7 @@
 const valOrZero = val => (val || 0)
 
 function WordFreq(start = []) {
+	if (typeof start === 'string') start = start.split(' ')
 	this.vals = start.reduce((acc, cur) => {
 		acc[cur] = valOrZero(acc[cur]) + 1
 		return acc

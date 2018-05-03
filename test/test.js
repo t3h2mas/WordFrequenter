@@ -1,3 +1,5 @@
+'use strict'
+
 const expect = require('chai').expect
 const WordFreq = require('../wordfrequenter.js')
 
@@ -8,8 +10,11 @@ describe('WordFreq', function () {
     beforeEach(() => {
         Words = new WordFreq(list)
     })
-    it('Words should be an instance of WordFreq', function () {
-        expect(Words instanceof WordFreq).to.equal(true)
+    it('should handle both arrays and strings as input', function () {
+        const fromStr = new WordFreq('foo bar baz')
+        const fromArr = new WordFreq(['foo', 'bar', 'baz'])
+
+        expect(fromStr).to.deep.equal(fromArr)
     })
     describe('.get', function () {
         it('should not find a word it was not initialized with', function () {
