@@ -9,7 +9,8 @@
     "tap-xunit": "^2.3.0"
   },
   "scripts": {
-    "test": "ava -v"
+    "test": "ava -v",
+    "test-ci": "ava --tap | tap-xunit > $CIRCLE_TEST_REPORTS/ava.xml"
   },
   "repository": {
     "type": "git",
