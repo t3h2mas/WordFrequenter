@@ -4,6 +4,8 @@ WordFrequenter
 JavaScript word frequency
 ----------------------
 [![CircleCI](https://circleci.com/gh/t3h2mas/WordFrequenter/tree/master.svg?style=shield&circle-token=14ee1323f824fa14426a6c52b543816382f5ac85)](https://circleci.com/gh/t3h2mas/WordFrequenter/tree/master)
+&nbsp;
+[![NPM](https://img.shields.io/npm/v/wordfrequenter.svg)](https://www.npmjs.com/package/wordfrequenter)
 ------------
 Inspired by Python's DefaultDict, WordFrequenter provides an object to count the frequency of words
 
